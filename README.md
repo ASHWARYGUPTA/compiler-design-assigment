@@ -1,9 +1,4 @@
-# Hydrogen Lang (CPP Compiler)
 
-Hydrogen is a Hobby programming language. It is called Hydrogen because it is simple, lightweight, and will catch on
-fire if handled improperly🔥
-
-This compiler is written in C++ but hopefully it will get to a point where it can be self-hosted.
 
 ## Building
 
@@ -11,19 +6,18 @@ Requires `nasm` and `ld` on a Linux operating system.
 
 ```bash
 git clone https://github.com/orosmatthew/hydrogen-cpp
-cd hydrogen-cpp
+cd compiler-design-assigment
 mkdir build
-cmake -S . -B build
-cmake --build build
+cd build
+cmake ..
+make
+./hydro ../test.hyd
+nasm -f elf64 out.asm -o out.o
+ld out.o -o out
+./out
+echo $?
 ```
 
 Executable will be `hydro` in the `build/` directory.
 
-## Contributing
 
-I am not accepting pull requests for now to better keep in sync with the accompanying video series. Possibly in the future.
-
-## Watch the Development
-
-YouTube video
-series "[Creating a Compiler](https://www.youtube.com/playlist?list=PLUDlas_Zy_qC7c5tCgTMYq2idyyT241qs)" by Pixeled
