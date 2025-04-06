@@ -11,7 +11,7 @@ mkdir build
 cd build
 cmake ..
 make
-./hydro ../test.hyd
+./hydro ../test.hy
 nasm -f elf64 out.asm -o out.o
 ld out.o -o out
 ./out
